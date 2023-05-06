@@ -1,0 +1,48 @@
+let videos = [ {
+    id: 1 ,
+    description:"Yotube Channel",  
+    title:"React Js Tutorials",
+     views:"999K views" , 
+     time:"1 year ago", 
+     channel:'Ved Dost',
+     verified:false ,
+  } ,
+  {
+    id: 2 ,
+    description:"Yotube Channel",  
+    title:"Node Js Tutorials",
+     views:"20K views " , 
+     time:"1 month ago", 
+     channel:'Ved Dost',
+     verified:true ,
+  } ,
+  {
+    id: 3 ,
+    description:"Yotube Channel",  
+    title:"Angular Tutorials",
+     views:"50K views " , 
+     time:"5 month ago", 
+     channel:'Ved Dost',
+     verified:false ,
+  } ,
+  {
+    id: 4 ,
+    description:"Yotube Channel",  
+    title:"Vue Js Tuttorials",
+     views:"30K views " , 
+     time:"25 month ago", 
+     channel:'Ved Dost',
+     verified:true ,
+  } ,
+
+  {
+    id: 5 ,
+    description:"Yotube Channel",  
+    title:"Python Tuttorials",
+     views:"30K views " , 
+     time:"50 month ago", 
+     channel:'Ved Dost',
+     verified:false ,
+  } ,
+]
+export default videos;

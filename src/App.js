@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import Video from "./components/Video.js";
+import videos from "./data/data.js";
+import PlayButton from "./components/PlayButton";
+import Counter from "./components/Counter";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="App" onClick={()=> console.log('App')}>
+      <h1 className="app">React Js Project</h1>
+      <div>Videos</div>
+
+      {/* Maps Higher order Function */}
+
+      {videos.map((video) => (
+        <Video
+          key={video.id}
+          verified={video.verified}
+          description={video.description}
+          title={video.title}
+          views={video.views}
+          time={video.time}
+          id={video.id}
         >
-          Learn React
-        </a>
-      </header>
+          <PlayButton
+            onPlay={() => console.log("Playing...." , video.title)}
+            onPause={() => console.log("Paused..." , video.title)}
+          >
+            {video.title}
+          </PlayButton>
+        </Video>
+      ))}
+
+      <div style={{ clear: "both" }}>
+        {/* <PlayButton  message='Hi You haved paused video a Button' onVed= {() => alert('Playyy')}> Pause</PlayButton> */}
+      </div>
+
+      
+
+<Counter />
+      {/* <Video {...obj}  verified={true}  /> //use sread Operator spread that Objects  */}
     </div>
+
   );
 }
 
